@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhatrangcatering | Dịch vụ Catering Cao Cấp Tại Nha Trang</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --gold: #D4AF37;
@@ -16,41 +19,45 @@
             --dark-gray: #111111;
             --light-gray: #f0f0f0;
         }
-        
+
         body {
             background-color: var(--black);
             color: #f0f0f0;
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
         }
-        
-        h1, h2, h3, h4, h5 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             font-family: 'Playfair Display', serif;
         }
-        
+
         .gold-text {
             color: var(--gold);
         }
-        
+
         .gold-bg {
             background-color: var(--gold);
             color: var(--black);
         }
-        
+
         .gold-border {
             border-color: var(--gold);
         }
-        
+
         .gold-gradient {
             background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
         }
-        
+
         .section-heading {
             position: relative;
             display: inline-block;
             margin-bottom: 2.5rem;
         }
-        
+
         .section-heading::after {
             content: '';
             position: absolute;
@@ -61,58 +68,58 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        
+
         .hero-overlay {
             background: rgba(0, 0, 0, 0.6);
         }
-        
+
         .service-card {
             transition: all 0.3s ease;
             background: rgba(17, 17, 17, 0.9);
             border: 1px solid rgba(212, 175, 55, 0.2);
             cursor: pointer;
         }
-        
+
         .service-card:hover {
             transform: translateY(-5px);
             border-color: var(--gold);
             box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
         }
-        
+
         .testimonial-card {
             background: var(--dark-gray);
             border-left: 4px solid var(--gold);
         }
-        
+
         .btn-gold {
             background-color: var(--gold);
             color: var(--black);
             font-weight: 600;
             transition: all 0.3s ease;
         }
-        
+
         .btn-gold:hover {
             background-color: var(--gold-dark);
             transform: translateY(-2px);
         }
-        
+
         .btn-outline-gold {
             border: 2px solid var(--gold);
             color: var(--gold);
             font-weight: 600;
             transition: all 0.3s ease;
         }
-        
+
         .btn-outline-gold:hover {
             background-color: var(--gold);
             color: var(--black);
         }
-        
+
         .step-card {
             background: rgba(17, 17, 17, 0.8);
             border: 1px solid rgba(212, 175, 55, 0.2);
         }
-        
+
         .step-number {
             background: var(--gold);
             color: var(--black);
@@ -125,7 +132,7 @@
             justify-content: center;
             margin: 0 auto 1rem;
         }
-        
+
         .logo {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
@@ -133,23 +140,23 @@
             color: var(--gold);
             letter-spacing: 1px;
         }
-        
+
         .gold-divider {
             height: 1px;
             background: linear-gradient(to right, transparent, var(--gold), transparent);
             width: 80%;
             margin: 2rem auto;
         }
-        
+
         .footer-link {
             color: var(--light-gray);
             transition: color 0.3s ease;
         }
-        
+
         .footer-link:hover {
             color: var(--gold);
         }
-        
+
         /* Parallax effect */
         .parallax {
             background-attachment: fixed;
@@ -157,7 +164,7 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        
+
         /* Gold gradient text */
         .gold-gradient-text {
             background: linear-gradient(to right, var(--gold-dark), var(--gold), var(--gold-light));
@@ -165,12 +172,12 @@
             background-clip: text;
             color: transparent;
         }
-        
+
         .navbar-link {
             position: relative;
             transition: color 0.3s ease;
         }
-        
+
         .navbar-link::after {
             content: '';
             position: absolute;
@@ -181,15 +188,15 @@
             background-color: var(--gold);
             transition: width 0.3s ease;
         }
-        
+
         .navbar-link:hover {
             color: var(--gold);
         }
-        
+
         .navbar-link:hover::after {
             width: 100%;
         }
-        
+
         /* Service Detail Sections */
         .service-detail {
             display: none;
@@ -203,11 +210,11 @@
             overflow-y: auto;
             padding: 80px 20px 40px;
         }
-        
+
         .service-detail.active {
             display: block;
         }
-        
+
         .close-button {
             position: absolute;
             top: 20px;
@@ -217,36 +224,48 @@
             cursor: pointer;
             transition: transform 0.3s ease;
         }
-        
+
         .close-button:hover {
             transform: rotate(90deg);
         }
-        
+
         .gallery-image {
             height: 200px;
             background-size: cover;
             background-position: center;
             transition: transform 0.3s ease;
         }
-        
+
         .gallery-image:hover {
             transform: scale(1.05);
         }
-        
+
         .back-to-services {
             position: fixed;
             bottom: 20px;
             right: 20px;
             z-index: 101;
         }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 80px;
+            margin-right: 10px;
+        }
     </style>
 </head>
+
 <body>
     <!-- Header/Navigation -->
     <header class="sticky top-0 z-50 bg-black bg-opacity-90 border-b border-gold-300 border-opacity-30">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <div class="logo">
+                    <img src="images/logonhatrang.jpg" alt="Logo" class="logo-img" />
                     <span>Nhatrang</span><span class="gold-text">Catering</span>
                 </div>
                 <nav class="hidden md:flex space-x-8">
@@ -276,10 +295,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;">
+    <section id="home" class="relative h-screen flex items-center justify-center"
+        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 gold-text">Trải Nghiệm Ẩm Thực Đẳng Cấp</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Dịch vụ catering cao cấp được thiết kế riêng cho từng sự kiện của bạn, mang đến những trải nghiệm ẩm thực tinh tế và đáng nhớ.</p>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Dịch vụ catering cao cấp được thiết kế riêng cho từng
+                sự kiện của bạn, mang đến những trải nghiệm ẩm thực tinh tế và đáng nhớ.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
                 <a href="#contact" class="btn-gold px-8 py-4 rounded-full text-lg">Đặt Tiệc Ngay</a>
                 <a href="#services" class="btn-outline-gold px-8 py-4 rounded-full text-lg">Khám Phá Dịch Vụ</a>
@@ -296,9 +317,11 @@
     <section class="py-20 bg-black">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-4xl mx-auto">
-                <h2 class="section-heading text-3xl md:text-4xl font-bold mb-6">Nhatrang<span class="gold-text">Catering</span></h2>
+                <h2 class="section-heading text-3xl md:text-4xl font-bold mb-6">Nhatrang<span
+                        class="gold-text">Catering</span></h2>
                 <p class="text-xl mb-8">Nền tảng công nghệ đặt tiệc cho doanh nghiệp dễ dàng, thông minh và tinh tế</p>
-                <p class="text-lg mb-10">Đặt tiệc thiết kế riêng cho sự kiện của bạn với sự hỗ trợ của đội ngũ chuyên viên hàng đầu.</p>
+                <p class="text-lg mb-10">Đặt tiệc thiết kế riêng cho sự kiện của bạn với sự hỗ trợ của đội ngũ chuyên
+                    viên hàng đầu.</p>
                 <p class="text-2xl gold-text font-semibold">Hơn 1.000 khách hàng đã tin dùng dịch vụ từ 2020</p>
             </div>
 
@@ -310,21 +333,24 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Đẳng Cấp</h3>
-                    <p>Tích hợp quản lý đơn hàng thông minh với mạng lưới đối tác đa dạng, tùy chỉnh thực đơn theo yêu cầu. Đơn giản hóa quy trình đặt tiệc giúp trải nghiệm dễ dàng và hiệu quả.</p>
+                    <p>Tích hợp quản lý đơn hàng thông minh với mạng lưới đối tác đa dạng, tùy chỉnh thực đơn theo yêu
+                        cầu. Đơn giản hóa quy trình đặt tiệc giúp trải nghiệm dễ dàng và hiệu quả.</p>
                 </div>
                 <div class="text-center p-6">
                     <div class="text-4xl mb-4 gold-text">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Hiệu Quả & Tiết Kiệm</h3>
-                    <p>Tự động hóa đơn đặt hàng số lượng lớn, hợp nhất hóa đơn. Giúp tối ưu hóa chi phí và giảm bớt công việc thủ công khi đặt tiệc cho doanh nghiệp.</p>
+                    <p>Tự động hóa đơn đặt hàng số lượng lớn, hợp nhất hóa đơn. Giúp tối ưu hóa chi phí và giảm bớt công
+                        việc thủ công khi đặt tiệc cho doanh nghiệp.</p>
                 </div>
                 <div class="text-center p-6">
                     <div class="text-4xl mb-4 gold-text">
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Minh Bạch</h3>
-                    <p>Cung cấp theo dõi đơn hàng theo thời gian thực, dễ dàng kiểm tra, thông tin chi tiết về thành phần món ăn. Giúp bạn theo dõi chi phí và chất lượng để đưa ra lựa chọn chính xác hơn.</p>
+                    <p>Cung cấp theo dõi đơn hàng theo thời gian thực, dễ dàng kiểm tra, thông tin chi tiết về thành
+                        phần món ăn. Giúp bạn theo dõi chi phí và chất lượng để đưa ra lựa chọn chính xác hơn.</p>
                 </div>
             </div>
         </div>
@@ -334,106 +360,141 @@
     <section id="services" class="py-20 bg-dark-gray">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="section-heading text-3xl md:text-4xl font-bold">Dịch Vụ <span class="gold-text">Catering</span> Cao Cấp</h2>
-                <p class="text-lg mt-4 max-w-3xl mx-auto">Giải pháp cho các bữa ăn, bữa tiệc được thiết kế riêng cho các sự kiện của công ty và cá nhân, với sự hỗ trợ từ đội ngũ chuyên viên hàng đầu.</p>
+                <h2 class="section-heading text-3xl md:text-4xl font-bold">Dịch Vụ <span
+                        class="gold-text">Catering</span> Cao Cấp</h2>
+                <p class="text-lg mt-4 max-w-3xl mx-auto">Giải pháp cho các bữa ăn, bữa tiệc được thiết kế riêng cho các
+                    sự kiện của công ty và cá nhân, với sự hỗ trợ từ đội ngũ chuyên viên hàng đầu.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('teabreak')">
-                    <div class="h-48 mb-4 overflow-hidden rounded-md" style="background: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-48 mb-4 overflow-hidden rounded-md"
+                        style="background: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Tea Breaks</h3>
-                    <p class="mb-4">Các bữa tiệc trà nhẹ nhàng với bánh ngọt và đồ ăn nhẹ phù hợp cho các cuộc họp và hội thảo.</p>
+                    <p class="mb-4">Các bữa tiệc trà nhẹ nhàng với bánh ngọt và đồ ăn nhẹ phù hợp cho các cuộc họp và
+                        hội thảo.</p>
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
                 </div>
-                
+
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('buffet')">
-                    <div class="h-48 mb-4 overflow-hidden rounded-md" style="background: url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-48 mb-4 overflow-hidden rounded-md"
+                        style="background: url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Buffets</h3>
-                    <p class="mb-4">Tiệc buffet đa dạng với các món ăn ngon miệng từ Việt Nam và quốc tế cho các sự kiện lớn.</p>
+                    <p class="mb-4">Tiệc buffet đa dạng với các món ăn ngon miệng từ Việt Nam và quốc tế cho các sự kiện
+                        lớn.</p>
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
                 </div>
-                
+
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('fingerfood')">
-                    <div class="h-48 mb-4 overflow-hidden rounded-md" style="background: url('https://images.unsplash.com/photo-1536392706976-e486e2ba97af?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-48 mb-4 overflow-hidden rounded-md"
+                        style="background: url('https://images.unsplash.com/photo-1536392706976-e486e2ba97af?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Finger Foods</h3>
-                    <p class="mb-4">Các món ăn nhỏ xinh đẹp mắt và dễ thưởng thức, lý tưởng cho các buổi networking và tiệc cocktail.</p>
+                    <p class="mb-4">Các món ăn nhỏ xinh đẹp mắt và dễ thưởng thức, lý tưởng cho các buổi networking và
+                        tiệc cocktail.</p>
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
                 </div>
-                
+
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('seated')">
-                    <div class="h-48 mb-4 overflow-hidden rounded-md" style="background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-48 mb-4 overflow-hidden rounded-md"
+                        style="background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Seated Meals</h3>
-                    <p class="mb-4">Bữa ăn phục vụ theo bàn với nhiều lựa chọn thực đơn sang trọng cho các sự kiện đặc biệt.</p>
+                    <p class="mb-4">Bữa ăn phục vụ theo bàn với nhiều lựa chọn thực đơn sang trọng cho các sự kiện đặc
+                        biệt.</p>
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
                 </div>
-                
+
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('cocktail')">
-                    <div class="h-48 mb-4 overflow-hidden rounded-md" style="background: url('https://images.unsplash.com/photo-1575023782549-62ca0d244a39?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-48 mb-4 overflow-hidden rounded-md"
+                        style="background: url('https://images.unsplash.com/photo-1575023782549-62ca0d244a39?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Cocktail & Canapé</h3>
-                    <p class="mb-4">Đồ uống sáng tạo kết hợp với các món canapé tinh tế cho các sự kiện và tiệc chiêu đãi.</p>
+                    <p class="mb-4">Đồ uống sáng tạo kết hợp với các món canapé tinh tế cho các sự kiện và tiệc chiêu
+                        đãi.</p>
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
                 </div>
-                
+
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('giftbox')">
-                    <div class="h-48 mb-4 overflow-hidden rounded-md" style="background: url('https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-48 mb-4 overflow-hidden rounded-md"
+                        style="background: url('https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Gift Boxes</h3>
-                    <p class="mb-4">Hộp quà tặng ẩm thực độc đáo và sang trọng, lựa chọn hoàn hảo cho các dịp lễ và kỷ niệm.</p>
+                    <p class="mb-4">Hộp quà tặng ẩm thực độc đáo và sang trọng, lựa chọn hoàn hảo cho các dịp lễ và kỷ
+                        niệm.</p>
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
                 </div>
-                
+
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('mealpack')">
-                    <div class="h-48 mb-4 overflow-hidden rounded-md" style="background: url('https://images.unsplash.com/photo-1543826173-70651703c5a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-48 mb-4 overflow-hidden rounded-md"
+                        style="background: url('https://images.unsplash.com/photo-1543826173-70651703c5a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Meal Packs</h3>
-                    <p class="mb-4">Các gói bữa ăn cá nhân chất lượng cao phục vụ cho các cuộc họp và sự kiện doanh nghiệp.</p>
+                    <p class="mb-4">Các gói bữa ăn cá nhân chất lượng cao phục vụ cho các cuộc họp và sự kiện doanh
+                        nghiệp.</p>
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
                 </div>
-                
+
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('livestation')">
-                    <div class="h-48 mb-4 overflow-hidden rounded-md" style="background: url('https://images.unsplash.com/photo-1556906903-ee20c67ade8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-48 mb-4 overflow-hidden rounded-md"
+                        style="background: url('https://images.unsplash.com/photo-1556906903-ee20c67ade8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Live Stations</h3>
-                    <p class="mb-4">Trạm chế biến trực tiếp với đầu bếp trình diễn, mang lại trải nghiệm ẩm thực tương tác và thú vị.</p>
+                    <p class="mb-4">Trạm chế biến trực tiếp với đầu bếp trình diễn, mang lại trải nghiệm ẩm thực tương
+                        tác và thú vị.</p>
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
                 </div>
-                
+
                 <!-- New Service Categories -->
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('tearbreak-event')">
-                    <div class="h-48 mb-4 overflow-hidden rounded-md" style="background: url('https://images.unsplash.com/photo-1587899897387-091ebd01a6b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-48 mb-4 overflow-hidden rounded-md"
+                        style="background: url('https://images.unsplash.com/photo-1587899897387-091ebd01a6b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Tiệc Tearbreak</h3>
-                    <p class="mb-4">Dịch vụ tổ chức tiệc giải lao đa dạng với trà, cà phê và bánh ngọt cho các hội nghị, hội thảo.</p>
+                    <p class="mb-4">Dịch vụ tổ chức tiệc giải lao đa dạng với trà, cà phê và bánh ngọt cho các hội nghị,
+                        hội thảo.</p>
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
                 </div>
-                
+
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('rental')">
-                    <div class="h-48 mb-4 overflow-hidden rounded-md" style="background: url('https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-48 mb-4 overflow-hidden rounded-md"
+                        style="background: url('https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Cho thuê vật dụng trang trí</h3>
-                    <p class="mb-4">Cung cấp và cho thuê các vật dụng trang trí tiệc sang trọng bao gồm bàn ghế, khăn trải bàn, hoa tươi và nhiều hơn nữa.</p>
+                    <p class="mb-4">Cung cấp và cho thuê các vật dụng trang trí tiệc sang trọng bao gồm bàn ghế, khăn
+                        trải bàn, hoa tươi và nhiều hơn nữa.</p>
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
                 </div>
-                
+
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('event')">
-                    <div class="h-48 mb-4 overflow-hidden rounded-md" style="background: url('https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-48 mb-4 overflow-hidden rounded-md"
+                        style="background: url('https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Tổ chức sự kiện</h3>
-                    <p class="mb-4">Dịch vụ tổ chức sự kiện chuyên nghiệp từ A-Z, từ lên ý tưởng đến thực hiện, bao gồm âm thanh, ánh sáng và giải trí.</p>
+                    <p class="mb-4">Dịch vụ tổ chức sự kiện chuyên nghiệp từ A-Z, từ lên ý tưởng đến thực hiện, bao gồm
+                        âm thanh, ánh sáng và giải trí.</p>
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
@@ -446,7 +507,8 @@
     <section id="process" class="py-20 bg-black">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="section-heading text-3xl md:text-4xl font-bold">Quy Trình <span class="gold-text">Đặt Tiệc</span></h2>
+                <h2 class="section-heading text-3xl md:text-4xl font-bold">Quy Trình <span class="gold-text">Đặt
+                        Tiệc</span></h2>
                 <p class="text-lg mt-4 max-w-3xl mx-auto">Đặt tiệc nhanh gọn và dễ dàng chỉ với vài bước đơn giản.</p>
             </div>
 
@@ -454,21 +516,22 @@
                 <div class="step-card p-6 rounded-lg text-center">
                     <div class="step-number">1</div>
                     <h3 class="text-xl font-bold mb-3 gold-text">Liên Hệ</h3>
-                    <p>Liên hệ với chúng tôi qua điện thoại, email hoặc form trên website để chia sẻ nhu cầu của bạn.</p>
+                    <p>Liên hệ với chúng tôi qua điện thoại, email hoặc form trên website để chia sẻ nhu cầu của bạn.
+                    </p>
                 </div>
-                
+
                 <div class="step-card p-6 rounded-lg text-center">
                     <div class="step-number">2</div>
                     <h3 class="text-xl font-bold mb-3 gold-text">Tư Vấn</h3>
                     <p>Chuyên viên của chúng tôi sẽ tư vấn và đề xuất các gói dịch vụ phù hợp với yêu cầu của bạn.</p>
                 </div>
-                
+
                 <div class="step-card p-6 rounded-lg text-center">
                     <div class="step-number">3</div>
                     <h3 class="text-xl font-bold mb-3 gold-text">Xác Nhận</h3>
                     <p>Xác nhận đơn đặt tiệc và thanh toán đặt cọc để chốt lịch và các dịch vụ đi kèm.</p>
                 </div>
-                
+
                 <div class="step-card p-6 rounded-lg text-center">
                     <div class="step-number">4</div>
                     <h3 class="text-xl font-bold mb-3 gold-text">Trải Nghiệm</h3>
@@ -486,8 +549,10 @@
         </div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="section-heading text-3xl md:text-4xl font-bold">Trọn Niềm Tin <span class="gold-text">Từ Khách Hàng</span></h2>
-                <p class="text-lg mt-4 max-w-3xl mx-auto">Những đánh giá chân thực từ khách hàng đã trải nghiệm dịch vụ của chúng tôi.</p>
+                <h2 class="section-heading text-3xl md:text-4xl font-bold">Trọn Niềm Tin <span class="gold-text">Từ
+                        Khách Hàng</span></h2>
+                <p class="text-lg mt-4 max-w-3xl mx-auto">Những đánh giá chân thực từ khách hàng đã trải nghiệm dịch vụ
+                    của chúng tôi.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -499,16 +564,20 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="italic mb-4">"Khi làm việc cùng Nhatrangcatering, các bạn rất tận tâm, chuyên nghiệp và chu đáo. Vận hành rất đúng giờ và linh hoạt trong việc hỗ trợ team hoàn thiện bữa tiệc. Cảm ơn rất nhiều!"</p>
+                    <p class="italic mb-4">"Khi làm việc cùng Nhatrangcatering, các bạn rất tận tâm, chuyên nghiệp và
+                        chu đáo. Vận hành rất đúng giờ và linh hoạt trong việc hỗ trợ team hoàn thiện bữa tiệc. Cảm ơn
+                        rất nhiều!"</p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-black font-bold mr-4">TH</div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-black font-bold mr-4">
+                            TH</div>
                         <div>
                             <p class="font-bold">Chị Thanh Hương</p>
                             <p class="text-sm">Phòng Nhân Sự, VinGroup</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card p-6 rounded-lg">
                     <div class="text-gold text-xl mb-4">
                         <i class="fas fa-star"></i>
@@ -517,16 +586,20 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="italic mb-4">"Chúng tôi đánh giá cao sự chuyên nghiệp và chất lượng dịch vụ của Nhatrangcatering. Đồ ăn không chỉ ngon mà còn được trình bày rất đẹp mắt. Chắc chắn sẽ hợp tác lâu dài."</p>
+                    <p class="italic mb-4">"Chúng tôi đánh giá cao sự chuyên nghiệp và chất lượng dịch vụ của
+                        Nhatrangcatering. Đồ ăn không chỉ ngon mà còn được trình bày rất đẹp mắt. Chắc chắn sẽ hợp tác
+                        lâu dài."</p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-black font-bold mr-4">NT</div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-black font-bold mr-4">
+                            NT</div>
                         <div>
                             <p class="font-bold">Anh Ngọc Tuấn</p>
                             <p class="text-sm">Giám đốc Marketing, FLC Group</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card p-6 rounded-lg">
                     <div class="text-gold text-xl mb-4">
                         <i class="fas fa-star"></i>
@@ -535,9 +608,13 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="italic mb-4">"Sự kiện của công ty chúng tôi đã thành công rực rỡ nhờ vào dịch vụ catering tuyệt vời. Đội ngũ nhân viên rất thân thiện và chuyên nghiệp. Đồ ăn ngon và phục vụ đúng giờ."</p>
+                    <p class="italic mb-4">"Sự kiện của công ty chúng tôi đã thành công rực rỡ nhờ vào dịch vụ catering
+                        tuyệt vời. Đội ngũ nhân viên rất thân thiện và chuyên nghiệp. Đồ ăn ngon và phục vụ đúng giờ."
+                    </p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-black font-bold mr-4">LM</div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-black font-bold mr-4">
+                            LM</div>
                         <div>
                             <p class="font-bold">Chị Lan Mai</p>
                             <p class="text-sm">Trưởng phòng Sự kiện, Sungroup</p>
@@ -549,22 +626,28 @@
             <div class="mt-16 text-center">
                 <h3 class="text-2xl font-bold mb-8">Đối Tác Tin Cậy</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                    <div class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
+                    <div
+                        class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
                         <p class="font-bold gold-text">VinGroup</p>
                     </div>
-                    <div class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
+                    <div
+                        class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
                         <p class="font-bold gold-text">Sungroup</p>
                     </div>
-                    <div class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
+                    <div
+                        class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
                         <p class="font-bold gold-text">FLC Group</p>
                     </div>
-                    <div class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
+                    <div
+                        class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
                         <p class="font-bold gold-text">MIK Group</p>
                     </div>
-                    <div class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
+                    <div
+                        class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
                         <p class="font-bold gold-text">BRG Group</p>
                     </div>
-                    <div class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
+                    <div
+                        class="p-4 bg-black bg-opacity-50 rounded-lg flex items-center justify-center h-20 border border-gold border-opacity-20">
                         <p class="font-bold gold-text">Marriott</p>
                     </div>
                 </div>
@@ -578,9 +661,14 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold mb-6">Về <span class="gold-text">Chúng Tôi</span></h2>
-                    <p class="mb-4">Nhatrangcatering là đơn vị tiên phong trong lĩnh vực cung cấp dịch vụ ẩm thực cao cấp tại khu vực Nha Trang và các tỉnh lân cận. Với đội ngũ đầu bếp giàu kinh nghiệm và nhân viên phục vụ chuyên nghiệp, chúng tôi tự hào mang đến những trải nghiệm ẩm thực đẳng cấp cho mọi sự kiện.</p>
-                    <p class="mb-4">Chúng tôi luôn đặt chất lượng và sự hài lòng của khách hàng lên hàng đầu. Mỗi dự án chúng tôi tham gia đều được chuẩn bị tỉ mỉ và chăm chút đến từng chi tiết nhỏ nhất.</p>
-                    <p class="mb-6">Sứ mệnh của chúng tôi là biến mỗi sự kiện thành một trải nghiệm ẩm thực khó quên, giúp khách hàng tạo ấn tượng tốt đẹp với đối tác và khách mời của họ.</p>
+                    <p class="mb-4">Nhatrangcatering là đơn vị tiên phong trong lĩnh vực cung cấp dịch vụ ẩm thực cao
+                        cấp tại khu vực Nha Trang và các tỉnh lân cận. Với đội ngũ đầu bếp giàu kinh nghiệm và nhân viên
+                        phục vụ chuyên nghiệp, chúng tôi tự hào mang đến những trải nghiệm ẩm thực đẳng cấp cho mọi sự
+                        kiện.</p>
+                    <p class="mb-4">Chúng tôi luôn đặt chất lượng và sự hài lòng của khách hàng lên hàng đầu. Mỗi dự án
+                        chúng tôi tham gia đều được chuẩn bị tỉ mỉ và chăm chút đến từng chi tiết nhỏ nhất.</p>
+                    <p class="mb-6">Sứ mệnh của chúng tôi là biến mỗi sự kiện thành một trải nghiệm ẩm thực khó quên,
+                        giúp khách hàng tạo ấn tượng tốt đẹp với đối tác và khách mời của họ.</p>
                     <div class="flex flex-wrap gap-4">
                         <div class="flex items-center">
                             <span class="text-gold text-2xl mr-2"><i class="fas fa-check-circle"></i></span>
@@ -597,10 +685,18 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
-                    <div class="h-64 rounded-lg overflow-hidden" style="background: url('https://images.unsplash.com/photo-1559635250-8c020de8ce6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
-                    <div class="h-64 rounded-lg overflow-hidden" style="background: url('https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
-                    <div class="h-64 rounded-lg overflow-hidden" style="background: url('https://images.unsplash.com/photo-1576402187878-974f70c890a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
-                    <div class="h-64 rounded-lg overflow-hidden" style="background: url('https://images.unsplash.com/photo-1527224538127-2104bb71c51d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;"></div>
+                    <div class="h-64 rounded-lg overflow-hidden"
+                        style="background: url('https://images.unsplash.com/photo-1559635250-8c020de8ce6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
+                    <div class="h-64 rounded-lg overflow-hidden"
+                        style="background: url('https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
+                    <div class="h-64 rounded-lg overflow-hidden"
+                        style="background: url('https://images.unsplash.com/photo-1576402187878-974f70c890a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
+                    <div class="h-64 rounded-lg overflow-hidden"
+                        style="background: url('https://images.unsplash.com/photo-1527224538127-2104bb71c51d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -610,8 +706,10 @@
     <section id="contact" class="py-20 bg-dark-gray">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="section-heading text-3xl md:text-4xl font-bold">Liên Hệ <span class="gold-text">Với Chúng Tôi</span></h2>
-                <p class="text-lg mt-4 max-w-3xl mx-auto">Hãy liên hệ ngay để được tư vấn và báo giá cho sự kiện của bạn.</p>
+                <h2 class="section-heading text-3xl md:text-4xl font-bold">Liên Hệ <span class="gold-text">Với Chúng
+                        Tôi</span></h2>
+                <p class="text-lg mt-4 max-w-3xl mx-auto">Hãy liên hệ ngay để được tư vấn và báo giá cho sự kiện của
+                    bạn.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
@@ -620,19 +718,26 @@
                     <form>
                         <div class="mb-4">
                             <label class="block mb-2">Họ và tên</label>
-                            <input type="text" class="w-full px-4 py-3 bg-black border border-gold border-opacity-30 rounded-md focus:border-gold focus:outline-none" placeholder="Nhập họ và tên">
+                            <input type="text"
+                                class="w-full px-4 py-3 bg-black border border-gold border-opacity-30 rounded-md focus:border-gold focus:outline-none"
+                                placeholder="Nhập họ và tên">
                         </div>
                         <div class="mb-4">
                             <label class="block mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-3 bg-black border border-gold border-opacity-30 rounded-md focus:border-gold focus:outline-none" placeholder="Nhập địa chỉ email">
+                            <input type="email"
+                                class="w-full px-4 py-3 bg-black border border-gold border-opacity-30 rounded-md focus:border-gold focus:outline-none"
+                                placeholder="Nhập địa chỉ email">
                         </div>
                         <div class="mb-4">
                             <label class="block mb-2">Số điện thoại</label>
-                            <input type="tel" class="w-full px-4 py-3 bg-black border border-gold border-opacity-30 rounded-md focus:border-gold focus:outline-none" placeholder="Nhập số điện thoại">
+                            <input type="tel"
+                                class="w-full px-4 py-3 bg-black border border-gold border-opacity-30 rounded-md focus:border-gold focus:outline-none"
+                                placeholder="Nhập số điện thoại">
                         </div>
                         <div class="mb-4">
                             <label class="block mb-2">Loại sự kiện</label>
-                            <select class="w-full px-4 py-3 bg-black border border-gold border-opacity-30 rounded-md focus:border-gold focus:outline-none">
+                            <select
+                                class="w-full px-4 py-3 bg-black border border-gold border-opacity-30 rounded-md focus:border-gold focus:outline-none">
                                 <option>Tiệc công ty</option>
                                 <option>Tiệc cưới</option>
                                 <option>Hội nghị</option>
@@ -642,7 +747,9 @@
                         </div>
                         <div class="mb-4">
                             <label class="block mb-2">Yêu cầu chi tiết</label>
-                            <textarea rows="4" class="w-full px-4 py-3 bg-black border border-gold border-opacity-30 rounded-md focus:border-gold focus:outline-none" placeholder="Mô tả chi tiết yêu cầu của bạn"></textarea>
+                            <textarea rows="4"
+                                class="w-full px-4 py-3 bg-black border border-gold border-opacity-30 rounded-md focus:border-gold focus:outline-none"
+                                placeholder="Mô tả chi tiết yêu cầu của bạn"></textarea>
                         </div>
                         <button type="submit" class="btn-gold px-6 py-3 rounded-md">Gửi Yêu Cầu</button>
                     </form>
@@ -653,21 +760,21 @@
                         <p class="text-lg font-bold mb-2">Địa chỉ:</p>
                         <p class="flex items-start">
                             <i class="fas fa-map-marker-alt text-gold mr-3 mt-1"></i>
-                            <span>101 Trần Phú, Phường Lộc Thọ, Thành phố Nha Trang, Tỉnh Khánh Hòa</span>
+                            <span>117 Củ Chi, Phường Vĩnh Hải, Thành phố Nha Trang, Tỉnh Khánh Hòa</span>
                         </p>
                     </div>
                     <div class="mb-6">
                         <p class="text-lg font-bold mb-2">Điện thoại:</p>
                         <p class="flex items-center">
                             <i class="fas fa-phone-alt text-gold mr-3"></i>
-                            <span>+84 258 3823 456</span>
+                            <span>0935 800 981</span>
                         </p>
                     </div>
                     <div class="mb-6">
                         <p class="text-lg font-bold mb-2">Email:</p>
                         <p class="flex items-center">
                             <i class="fas fa-envelope text-gold mr-3"></i>
-                            <span>info@nhatrangcatering.com</span>
+                            <span>cateringnhatrang@gmail.com</span>
                         </p>
                     </div>
                     <div class="mb-6">
@@ -680,16 +787,20 @@
                     <div class="mt-8">
                         <p class="text-lg font-bold mb-4">Kết nối với chúng tôi:</p>
                         <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
                                 <i class="fab fa-youtube"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </div>
@@ -713,12 +824,18 @@
                 <div>
                     <h4 class="text-xl font-bold mb-4 gold-text">Dịch Vụ</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="footer-link" onclick="showServiceDetail('teabreak'); return false;">Tea Breaks</a></li>
-                        <li><a href="#" class="footer-link" onclick="showServiceDetail('buffet'); return false;">Buffets</a></li>
-                        <li><a href="#" class="footer-link" onclick="showServiceDetail('fingerfood'); return false;">Finger Foods</a></li>
-                        <li><a href="#" class="footer-link" onclick="showServiceDetail('seated'); return false;">Seated Meals</a></li>
-                        <li><a href="#" class="footer-link" onclick="showServiceDetail('tearbreak-event'); return false;">Tiệc Tearbreak</a></li>
-                        <li><a href="#" class="footer-link" onclick="showServiceDetail('event'); return false;">Tổ chức sự kiện</a></li>
+                        <li><a href="#" class="footer-link" onclick="showServiceDetail('teabreak'); return false;">Tea
+                                Breaks</a></li>
+                        <li><a href="#" class="footer-link"
+                                onclick="showServiceDetail('buffet'); return false;">Buffets</a></li>
+                        <li><a href="#" class="footer-link"
+                                onclick="showServiceDetail('fingerfood'); return false;">Finger Foods</a></li>
+                        <li><a href="#" class="footer-link" onclick="showServiceDetail('seated'); return false;">Seated
+                                Meals</a></li>
+                        <li><a href="#" class="footer-link"
+                                onclick="showServiceDetail('tearbreak-event'); return false;">Tiệc Tearbreak</a></li>
+                        <li><a href="#" class="footer-link" onclick="showServiceDetail('event'); return false;">Tổ chức
+                                sự kiện</a></li>
                     </ul>
                 </div>
                 <div>
@@ -735,7 +852,8 @@
                     <h4 class="text-xl font-bold mb-4 gold-text">Đăng Ký Nhận Tin</h4>
                     <p class="mb-4">Đăng ký nhận tin tức và ưu đãi mới nhất từ chúng tôi.</p>
                     <div class="flex">
-                        <input type="email" placeholder="Email của bạn" class="px-4 py-2 bg-dark-gray border border-gold border-opacity-30 rounded-l-md focus:outline-none flex-grow">
+                        <input type="email" placeholder="Email của bạn"
+                            class="px-4 py-2 bg-dark-gray border border-gold border-opacity-30 rounded-l-md focus:outline-none flex-grow">
                         <button class="btn-gold px-4 py-2 rounded-r-md">Gửi</button>
                     </div>
                 </div>
@@ -748,7 +866,8 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <a href="#home" class="fixed bottom-8 right-8 w-12 h-12 bg-gold rounded-full flex items-center justify-center text-black shadow-lg transition-all hover:bg-gold-dark">
+    <a href="#home"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-gold rounded-full flex items-center justify-center text-black shadow-lg transition-all hover:bg-gold-dark">
         <i class="fas fa-chevron-up"></i>
     </a>
 
@@ -759,14 +878,17 @@
         <div class="container mx-auto px-4 py-8">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Tea <span class="gold-text">Breaks</span></h2>
             <div class="gold-divider my-6"></div>
-            
+
             <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
                 <div>
                     <h3 class="text-2xl font-bold mb-4 gold-text">Giải Pháp Hoàn Hảo Cho Cuộc Họp & Hội Thảo</h3>
-                    <p class="mb-4">Tea Breaks của Nhatrangcatering cung cấp giải pháp tiệc trà nhẹ nhàng, thanh lịch và tiện lợi cho các buổi họp, hội thảo, đào tạo hoặc các sự kiện doanh nghiệp khác.</p>
-                    <p class="mb-4">Với thực đơn đa dạng từ bánh ngọt, bánh mặn đến trái cây và đồ uống, chúng tôi đảm bảo mang đến những khoảnh khắc thư giãn và bổ dưỡng giữa các phiên làm việc.</p>
-                    <p class="mb-4">Đội ngũ nhân viên chuyên nghiệp của chúng tôi sẽ phục vụ tận nơi, đảm bảo mọi thứ được chuẩn bị chu đáo và phục vụ đúng giờ.</p>
-                    
+                    <p class="mb-4">Tea Breaks của Nhatrangcatering cung cấp giải pháp tiệc trà nhẹ nhàng, thanh lịch và
+                        tiện lợi cho các buổi họp, hội thảo, đào tạo hoặc các sự kiện doanh nghiệp khác.</p>
+                    <p class="mb-4">Với thực đơn đa dạng từ bánh ngọt, bánh mặn đến trái cây và đồ uống, chúng tôi đảm
+                        bảo mang đến những khoảnh khắc thư giãn và bổ dưỡng giữa các phiên làm việc.</p>
+                    <p class="mb-4">Đội ngũ nhân viên chuyên nghiệp của chúng tôi sẽ phục vụ tận nơi, đảm bảo mọi thứ
+                        được chuẩn bị chu đáo và phục vụ đúng giờ.</p>
+
                     <div class="mt-8">
                         <h4 class="text-xl font-bold mb-3">Dịch vụ bao gồm:</h4>
                         <ul class="list-disc list-inside space-y-2 pl-4">
@@ -779,14 +901,17 @@
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tea Break" class="rounded-lg w-full mb-6">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Tea Break" class="rounded-lg w-full mb-6">
                     <div class="grid grid-cols-2 gap-4">
-                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tea Break" class="rounded-lg w-full">
-                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tea Break" class="rounded-lg w-full">
+                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                            alt="Tea Break" class="rounded-lg w-full">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                            alt="Tea Break" class="rounded-lg w-full">
                     </div>
                 </div>
             </div>
-            
+
             <div class="my-12">
                 <h3 class="text-2xl font-bold mb-6 text-center">Thực Đơn <span class="gold-text">Mẫu</span></h3>
                 <div class="grid md:grid-cols-3 gap-6">
@@ -834,9 +959,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
-                <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ Đặt Tiệc</a>
+                <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block"
+                    onclick="closeServiceDetail()">Liên Hệ Đặt Tiệc</a>
             </div>
         </div>
     </div>
@@ -847,14 +973,18 @@
         <div class="container mx-auto px-4 py-8">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Tiệc <span class="gold-text">Buffet</span> Cao Cấp</h2>
             <div class="gold-divider my-6"></div>
-            
+
             <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
                 <div>
                     <h3 class="text-2xl font-bold mb-4 gold-text">Trải Nghiệm Ẩm Thực Đa Dạng</h3>
-                    <p class="mb-4">Tiệc buffet của Nhatrangcatering mang đến trải nghiệm ẩm thực phong phú với đa dạng món ăn từ Việt Nam đến quốc tế, phù hợp cho mọi loại sự kiện từ hội nghị công ty đến tiệc cưới và các sự kiện đặc biệt.</p>
-                    <p class="mb-4">Với đội ngũ đầu bếp tài năng, chúng tôi cam kết mang đến những món ăn ngon miệng, được chế biến từ nguyên liệu tươi ngon và trình bày bắt mắt.</p>
-                    <p class="mb-4">Chúng tôi có thể tùy chỉnh thực đơn theo yêu cầu và sở thích của khách hàng, đảm bảo mọi thực khách đều tìm thấy món ăn yêu thích.</p>
-                    
+                    <p class="mb-4">Tiệc buffet của Nhatrangcatering mang đến trải nghiệm ẩm thực phong phú với đa dạng
+                        món ăn từ Việt Nam đến quốc tế, phù hợp cho mọi loại sự kiện từ hội nghị công ty đến tiệc cưới
+                        và các sự kiện đặc biệt.</p>
+                    <p class="mb-4">Với đội ngũ đầu bếp tài năng, chúng tôi cam kết mang đến những món ăn ngon miệng,
+                        được chế biến từ nguyên liệu tươi ngon và trình bày bắt mắt.</p>
+                    <p class="mb-4">Chúng tôi có thể tùy chỉnh thực đơn theo yêu cầu và sở thích của khách hàng, đảm bảo
+                        mọi thực khách đều tìm thấy món ăn yêu thích.</p>
+
                     <div class="mt-8">
                         <h4 class="text-xl font-bold mb-3">Dịch vụ bao gồm:</h4>
                         <ul class="list-disc list-inside space-y-2 pl-4">
@@ -867,14 +997,17 @@
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Buffet" class="rounded-lg w-full mb-6">
+                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Buffet" class="rounded-lg w-full mb-6">
                     <div class="grid grid-cols-2 gap-4">
-                        <img src="https://images.unsplash.com/photo-1547573854-74d2a71d0826?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Buffet" class="rounded-lg w-full">
-                        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Buffet" class="rounded-lg w-full">
+                        <img src="https://images.unsplash.com/photo-1547573854-74d2a71d0826?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                            alt="Buffet" class="rounded-lg w-full">
+                        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                            alt="Buffet" class="rounded-lg w-full">
                     </div>
                 </div>
             </div>
-            
+
             <div class="my-12">
                 <h3 class="text-2xl font-bold mb-6 text-center">Thực Đơn <span class="gold-text">Mẫu</span></h3>
                 <div class="grid md:grid-cols-3 gap-6">
@@ -934,9 +1067,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
-                <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ Đặt Tiệc</a>
+                <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block"
+                    onclick="closeServiceDetail()">Liên Hệ Đặt Tiệc</a>
             </div>
         </div>
     </div>
@@ -945,16 +1079,21 @@
     <div id="tearbreak-event-detail" class="service-detail">
         <span class="close-button" onclick="closeServiceDetail()">&times;</span>
         <div class="container mx-auto px-4 py-8">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Tiệc <span class="gold-text">Tearbreak</span> Chuyên Nghiệp</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Tiệc <span class="gold-text">Tearbreak</span> Chuyên Nghiệp
+            </h2>
             <div class="gold-divider my-6"></div>
-            
+
             <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
                 <div>
                     <h3 class="text-2xl font-bold mb-4 gold-text">Giải Lao Thư Giãn Giữa Các Phiên Họp</h3>
-                    <p class="mb-4">Dịch vụ Tiệc Tearbreak của Nhatrangcatering được thiết kế đặc biệt cho các hội nghị, hội thảo và cuộc họp doanh nghiệp, mang đến không gian thư giãn và giao lưu giữa các phiên làm việc.</p>
-                    <p class="mb-4">Chúng tôi cung cấp các gói tearbreak đa dạng với đồ ăn nhẹ, bánh ngọt, trà, cà phê và nước giải khát, giúp những người tham gia có thể nạp năng lượng và làm mới tinh thần.</p>
-                    <p class="mb-4">Đội ngũ nhân viên chuyên nghiệp của chúng tôi sẽ chuẩn bị, phục vụ và dọn dẹp sau mỗi phiên tearbreak, đảm bảo sự liền mạch và không làm gián đoạn lịch trình của sự kiện.</p>
-                    
+                    <p class="mb-4">Dịch vụ Tiệc Tearbreak của Nhatrangcatering được thiết kế đặc biệt cho các hội nghị,
+                        hội thảo và cuộc họp doanh nghiệp, mang đến không gian thư giãn và giao lưu giữa các phiên làm
+                        việc.</p>
+                    <p class="mb-4">Chúng tôi cung cấp các gói tearbreak đa dạng với đồ ăn nhẹ, bánh ngọt, trà, cà phê
+                        và nước giải khát, giúp những người tham gia có thể nạp năng lượng và làm mới tinh thần.</p>
+                    <p class="mb-4">Đội ngũ nhân viên chuyên nghiệp của chúng tôi sẽ chuẩn bị, phục vụ và dọn dẹp sau
+                        mỗi phiên tearbreak, đảm bảo sự liền mạch và không làm gián đoạn lịch trình của sự kiện.</p>
+
                     <div class="mt-8">
                         <h4 class="text-xl font-bold mb-3">Ưu điểm dịch vụ:</h4>
                         <ul class="list-disc list-inside space-y-2 pl-4">
@@ -967,14 +1106,17 @@
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1587899897387-091ebd01a6b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tearbreak" class="rounded-lg w-full mb-6">
+                    <img src="https://images.unsplash.com/photo-1587899897387-091ebd01a6b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Tearbreak" class="rounded-lg w-full mb-6">
                     <div class="grid grid-cols-2 gap-4">
-                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tearbreak" class="rounded-lg w-full">
-                        <img src="https://images.unsplash.com/photo-1547042675-0415be9a705a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tearbreak" class="rounded-lg w-full">
+                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                            alt="Tearbreak" class="rounded-lg w-full">
+                        <img src="https://images.unsplash.com/photo-1547042675-0415be9a705a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                            alt="Tearbreak" class="rounded-lg w-full">
                     </div>
                 </div>
             </div>
-            
+
             <div class="my-12">
                 <h3 class="text-2xl font-bold mb-6 text-center">Gói <span class="gold-text">Dịch Vụ</span></h3>
                 <div class="grid md:grid-cols-3 gap-6">
@@ -1030,9 +1172,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
-                <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ Đặt Tiệc</a>
+                <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block"
+                    onclick="closeServiceDetail()">Liên Hệ Đặt Tiệc</a>
             </div>
         </div>
     </div>
@@ -1041,16 +1184,20 @@
     <div id="rental-detail" class="service-detail">
         <span class="close-button" onclick="closeServiceDetail()">&times;</span>
         <div class="container mx-auto px-4 py-8">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Cho Thuê <span class="gold-text">Vật Dụng Trang Trí</span></h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Cho Thuê <span class="gold-text">Vật Dụng Trang Trí</span>
+            </h2>
             <div class="gold-divider my-6"></div>
-            
+
             <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
                 <div>
                     <h3 class="text-2xl font-bold mb-4 gold-text">Nâng Tầm Sự Kiện Với Trang Trí Đẳng Cấp</h3>
-                    <p class="mb-4">Nhatrangcatering không chỉ cung cấp dịch vụ ẩm thực mà còn cho thuê đa dạng vật dụng trang trí cao cấp, giúp không gian sự kiện của bạn trở nên sang trọng và ấn tượng hơn.</p>
-                    <p class="mb-4">Chúng tôi có đầy đủ các vật dụng từ bàn ghế, khăn trải bàn, hoa trang trí đến đèn led, backdrop và nhiều phụ kiện khác để phù hợp với mọi chủ đề sự kiện.</p>
-                    <p class="mb-4">Dịch vụ cho thuê vật dụng trang trí có thể đặt riêng hoặc kết hợp với các dịch vụ catering của chúng tôi, mang đến giải pháp trọn gói cho sự kiện của bạn.</p>
-                    
+                    <p class="mb-4">Nhatrangcatering không chỉ cung cấp dịch vụ ẩm thực mà còn cho thuê đa dạng vật dụng
+                        trang trí cao cấp, giúp không gian sự kiện của bạn trở nên sang trọng và ấn tượng hơn.</p>
+                    <p class="mb-4">Chúng tôi có đầy đủ các vật dụng từ bàn ghế, khăn trải bàn, hoa trang trí đến đèn
+                        led, backdrop và nhiều phụ kiện khác để phù hợp với mọi chủ đề sự kiện.</p>
+                    <p class="mb-4">Dịch vụ cho thuê vật dụng trang trí có thể đặt riêng hoặc kết hợp với các dịch vụ
+                        catering của chúng tôi, mang đến giải pháp trọn gói cho sự kiện của bạn.</p>
+
                     <div class="mt-8">
                         <h4 class="text-xl font-bold mb-3">Danh mục vật dụng cho thuê:</h4>
                         <ul class="list-disc list-inside space-y-2 pl-4">
@@ -1066,14 +1213,17 @@
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Decoration Rental" class="rounded-lg w-full mb-6">
+                    <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Decoration Rental" class="rounded-lg w-full mb-6">
                     <div class="grid grid-cols-2 gap-4">
-                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Decoration Rental" class="rounded-lg w-full">
-                        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Decoration Rental" class="rounded-lg w-full">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                            alt="Decoration Rental" class="rounded-lg w-full">
+                        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                            alt="Decoration Rental" class="rounded-lg w-full">
                     </div>
                 </div>
             </div>
-            
+
             <div class="my-12">
                 <h3 class="text-2xl font-bold mb-6 text-center">Bộ Sưu Tập <span class="gold-text">Trang Trí</span></h3>
                 <div class="grid md:grid-cols-3 gap-6">
@@ -1126,9 +1276,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
-                <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ Đặt Thuê</a>
+                <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block"
+                    onclick="closeServiceDetail()">Liên Hệ Đặt Thuê</a>
             </div>
         </div>
     </div>
@@ -1139,14 +1290,18 @@
         <div class="container mx-auto px-4 py-8">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Tổ Chức <span class="gold-text">Sự Kiện</span> Trọn Gói</h2>
             <div class="gold-divider my-6"></div>
-            
+
             <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
                 <div>
                     <h3 class="text-2xl font-bold mb-4 gold-text">Giải Pháp Sự Kiện Hoàn Hảo Từ A-Z</h3>
-                    <p class="mb-4">Nhatrangcatering cung cấp dịch vụ tổ chức sự kiện trọn gói, từ lên ý tưởng, lập kế hoạch đến triển khai thực hiện, giúp khách hàng tiết kiệm thời gian và công sức.</p>
-                    <p class="mb-4">Với đội ngũ chuyên gia giàu kinh nghiệm, chúng tôi cam kết mang đến những sự kiện thành công và đáng nhớ, từ hội nghị doanh nghiệp, tiệc kỷ niệm, đến các sự kiện ra mắt sản phẩm.</p>
-                    <p class="mb-4">Chúng tôi chú trọng vào từng chi tiết để đảm bảo sự kiện của bạn diễn ra suôn sẻ và tạo ấn tượng tốt đẹp với khách mời.</p>
-                    
+                    <p class="mb-4">Nhatrangcatering cung cấp dịch vụ tổ chức sự kiện trọn gói, từ lên ý tưởng, lập kế
+                        hoạch đến triển khai thực hiện, giúp khách hàng tiết kiệm thời gian và công sức.</p>
+                    <p class="mb-4">Với đội ngũ chuyên gia giàu kinh nghiệm, chúng tôi cam kết mang đến những sự kiện
+                        thành công và đáng nhớ, từ hội nghị doanh nghiệp, tiệc kỷ niệm, đến các sự kiện ra mắt sản phẩm.
+                    </p>
+                    <p class="mb-4">Chúng tôi chú trọng vào từng chi tiết để đảm bảo sự kiện của bạn diễn ra suôn sẻ và
+                        tạo ấn tượng tốt đẹp với khách mời.</p>
+
                     <div class="mt-8">
                         <h4 class="text-xl font-bold mb-3">Dịch vụ tổ chức sự kiện bao gồm:</h4>
                         <ul class="list-disc list-inside space-y-2 pl-4">
@@ -1163,14 +1318,17 @@
                     </div>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Event Organization" class="rounded-lg w-full mb-6">
+                    <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Event Organization" class="rounded-lg w-full mb-6">
                     <div class="grid grid-cols-2 gap-4">
-                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Event Organization" class="rounded-lg w-full">
-                        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Event Organization" class="rounded-lg w-full">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                            alt="Event Organization" class="rounded-lg w-full">
+                        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                            alt="Event Organization" class="rounded-lg w-full">
                     </div>
                 </div>
             </div>
-            
+
             <div class="my-12">
                 <h3 class="text-2xl font-bold mb-6 text-center">Loại <span class="gold-text">Sự Kiện</span></h3>
                 <div class="grid md:grid-cols-3 gap-6">
@@ -1221,9 +1379,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
-                <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ Tư Vấn</a>
+                <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block"
+                    onclick="closeServiceDetail()">Liên Hệ Tư Vấn</a>
             </div>
         </div>
     </div>
@@ -1235,7 +1394,8 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Finger <span class="gold-text">Foods</span></h2>
             <div class="gold-divider my-6"></div>
             <p class="text-xl mb-8">Thông tin chi tiết về dịch vụ Finger Foods đang được cập nhật.</p>
-            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ Ngay</a>
+            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ
+                Ngay</a>
         </div>
     </div>
 
@@ -1245,7 +1405,8 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Seated <span class="gold-text">Meals</span></h2>
             <div class="gold-divider my-6"></div>
             <p class="text-xl mb-8">Thông tin chi tiết về dịch vụ Seated Meals đang được cập nhật.</p>
-            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ Ngay</a>
+            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ
+                Ngay</a>
         </div>
     </div>
 
@@ -1255,7 +1416,8 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Cocktail & <span class="gold-text">Canapé</span></h2>
             <div class="gold-divider my-6"></div>
             <p class="text-xl mb-8">Thông tin chi tiết về dịch vụ Cocktail & Canapé đang được cập nhật.</p>
-            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ Ngay</a>
+            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ
+                Ngay</a>
         </div>
     </div>
 
@@ -1265,7 +1427,8 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Gift <span class="gold-text">Boxes</span></h2>
             <div class="gold-divider my-6"></div>
             <p class="text-xl mb-8">Thông tin chi tiết về dịch vụ Gift Boxes đang được cập nhật.</p>
-            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ Ngay</a>
+            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ
+                Ngay</a>
         </div>
     </div>
 
@@ -1275,7 +1438,8 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Meal <span class="gold-text">Packs</span></h2>
             <div class="gold-divider my-6"></div>
             <p class="text-xl mb-8">Thông tin chi tiết về dịch vụ Meal Packs đang được cập nhật.</p>
-            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ Ngay</a>
+            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ
+                Ngay</a>
         </div>
     </div>
 
@@ -1285,13 +1449,14 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Live <span class="gold-text">Stations</span></h2>
             <div class="gold-divider my-6"></div>
             <p class="text-xl mb-8">Thông tin chi tiết về dịch vụ Live Stations đang được cập nhật.</p>
-            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ Ngay</a>
+            <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ
+                Ngay</a>
         </div>
     </div>
 
     <script>
         // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
@@ -1301,7 +1466,7 @@
             anchor.addEventListener('click', function (e) {
                 if (this.getAttribute('href').startsWith('#')) {
                     e.preventDefault();
-                    
+
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
                         behavior: 'smooth'
                     });
@@ -1310,7 +1475,7 @@
         });
 
         // Show/hide back to top button
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const backToTopButton = document.querySelector('a[href="#home"]');
             if (window.scrollY > 300) {
                 backToTopButton.style.opacity = '1';
@@ -1325,7 +1490,7 @@
             document.querySelectorAll('.service-detail').forEach(detail => {
                 detail.classList.remove('active');
             });
-            
+
             // Show the selected service detail
             const detailElement = document.getElementById(`${serviceId}-detail`);
             if (detailElement) {
@@ -1333,7 +1498,7 @@
                 document.body.style.overflow = 'hidden'; // Prevent scrolling of the main page
             }
         }
-        
+
         function closeServiceDetail() {
             // Hide all service details
             document.querySelectorAll('.service-detail').forEach(detail => {
@@ -1343,12 +1508,12 @@
         }
 
         // Close service detail on ESC key press
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeServiceDetail();
             }
         });
     </script>
 </body>
-</html>
 
+</html>
