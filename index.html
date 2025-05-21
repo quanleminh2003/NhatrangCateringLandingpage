@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhatrangcatering | Dịch vụ Catering Cao Cấp Tại Nha Trang</title>
-      <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-      <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Header/Navigation -->
     <header class="sticky top-0 z-50 bg-black bg-opacity-90 border-b border-gold-300 border-opacity-30">
@@ -121,7 +122,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('teabreak')">
+                <!-- <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('teabreak')">
                     <div class="h-48 mb-4 overflow-hidden rounded-md"
                         style="background: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
                     </div>
@@ -131,7 +132,7 @@
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
-                </div>
+                </div> -->
 
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('buffet')">
                     <div class="h-48 mb-4 overflow-hidden rounded-md"
@@ -147,7 +148,7 @@
 
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('fingerfood')">
                     <div class="h-48 mb-4 overflow-hidden rounded-md"
-                        style="background: url('https://images.unsplash.com/photo-1536392706976-e486e2ba97af?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                        style="background: url('images/fingerfood.png') center/cover no-repeat;">
                     </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Finger Foods</h3>
                     <p class="mb-4">Các món ăn nhỏ xinh đẹp mắt và dễ thưởng thức, lý tưởng cho các buổi networking và
@@ -157,7 +158,7 @@
                     </span>
                 </div>
 
-                <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('seated')">
+                <!-- <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('seated')">
                     <div class="h-48 mb-4 overflow-hidden rounded-md"
                         style="background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
                     </div>
@@ -167,9 +168,9 @@
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
-                </div>
+                </div> -->
 
-                <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('cocktail')">
+                <!-- <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('cocktail')">
                     <div class="h-48 mb-4 overflow-hidden rounded-md"
                         style="background: url('https://images.unsplash.com/photo-1575023782549-62ca0d244a39?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
                     </div>
@@ -179,11 +180,11 @@
                     <span class="text-gold inline-flex items-center">
                         Xem chi tiết <i class="fas fa-arrow-right ml-2"></i>
                     </span>
-                </div>
+                </div> -->
 
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('giftbox')">
                     <div class="h-48 mb-4 overflow-hidden rounded-md"
-                        style="background: url('https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                        style="background: url('images/giftbox.png') center/cover no-repeat;">
                     </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Gift Boxes</h3>
                     <p class="mb-4">Hộp quà tặng ẩm thực độc đáo và sang trọng, lựa chọn hoàn hảo cho các dịp lễ và kỷ
@@ -195,7 +196,7 @@
 
                 <div class="service-card p-6 rounded-lg" onclick="showServiceDetail('mealpack')">
                     <div class="h-48 mb-4 overflow-hidden rounded-md"
-                        style="background: url('https://images.unsplash.com/photo-1543826173-70651703c5a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;">
+                        style="background: url('images/comtrua.png') center/cover no-repeat;">
                     </div>
                     <h3 class="text-xl font-bold mb-2 gold-text">Meal Packs</h3>
                     <p class="mb-4">Các gói bữa ăn cá nhân chất lượng cao phục vụ cho các cuộc họp và sự kiện doanh
@@ -763,66 +764,12 @@
                 </div>
             </div>
 
-            <div class="my-12">
-                <h3 class="text-2xl font-bold mb-6 text-center">Thực Đơn <span class="gold-text">Mẫu</span></h3>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-20">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Buffet Việt Nam</h4>
-                        <ul class="space-y-2">
-                            <li>Gỏi cuốn tôm thịt</li>
-                            <li>Chả giò hải sản</li>
-                            <li>Bún chả Hà Nội</li>
-                            <li>Gà nướng lá chanh</li>
-                            <li>Cá chiên sốt cà chua</li>
-                            <li>Rau xào thập cẩm</li>
-                            <li>Cơm chiên hải sản</li>
-                            <li>Chè trôi nước</li>
-                            <li>Trái cây theo mùa</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text font-bold">250.000 VND/khách</p>
-                        </div>
-                    </div>
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-30">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Buffet Châu Á</h4>
-                        <ul class="space-y-2">
-                            <li>Sushi và Sashimi</li>
-                            <li>Gỏi xoài Thái Lan</li>
-                            <li>Dimsum các loại</li>
-                            <li>Cơm chiên Dương Châu</li>
-                            <li>Bò lúc lắc</li>
-                            <li>Cà ri gà kiểu Thái</li>
-                            <li>Mì xào hải sản</li>
-                            <li>Súp hải sản</li>
-                            <li>Bánh plan caramel</li>
-                            <li>Trái cây theo mùa</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text font-bold">350.000 VND/khách</p>
-                        </div>
-                    </div>
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-20">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Buffet Quốc tế</h4>
-                        <ul class="space-y-2">
-                            <li>Hàu sống và hải sản tươi</li>
-                            <li>Sashimi cá hồi</li>
-                            <li>Salad Caesar</li>
-                            <li>Thịt bò Wellington</li>
-                            <li>Cá hồi nướng sốt bơ chanh</li>
-                            <li>Pasta hải sản</li>
-                            <li>Risotto nấm truffle</li>
-                            <li>Khoai tây nướng phô mai</li>
-                            <li>Tiramisu</li>
-                            <li>Bánh Crème brûlée</li>
-                            <li>Trái cây theo mùa</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text font-bold">450.000 VND/khách</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+            <div class="grid md:grid-cols-3 gap-6">
+                <img src="images/buffet.png" alt="">
+                <img src="images/buffet1.png" alt="">
+                <img src="images/buffet2.png" alt="">
+            </div>
             <div class="text-center mt-12">
                 <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block"
                     onclick="closeServiceDetail()">Liên Hệ Đặt Tiệc</a>
@@ -866,68 +813,17 @@
                     <div class="grid grid-cols-2 gap-4">
                         <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
                             alt="Tearbreak" class="rounded-lg w-full">
-                        <img src="https://images.unsplash.com/photo-1547042675-0415be9a705a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        <img src="images/tearbreak4.png"
                             alt="Tearbreak" class="rounded-lg w-full">
                     </div>
                 </div>
             </div>
 
-            <div class="my-12">
-                <h3 class="text-2xl font-bold mb-6 text-center">Gói <span class="gold-text">Dịch Vụ</span></h3>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-20">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Tearbreak Cơ Bản</h4>
-                        <p class="mb-3">Phù hợp cho các cuộc họp nội bộ và hội thảo nhỏ.</p>
-                        <ul class="space-y-2">
-                            <li>Bánh ngọt & bánh mặn (3 loại)</li>
-                            <li>Trái cây theo mùa</li>
-                            <li>Cà phê, trà các loại</li>
-                            <li>Nước lọc, nước ngọt</li>
-                            <li>Bao gồm trang trí bàn tiệc đơn giản</li>
-                            <li>Nhân viên phục vụ</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text font-bold">70.000 VND/khách</p>
-                        </div>
-                    </div>
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-30">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Tearbreak Tiêu Chuẩn</h4>
-                        <p class="mb-3">Lý tưởng cho các hội nghị và sự kiện doanh nghiệp.</p>
-                        <ul class="space-y-2">
-                            <li>Bánh ngọt & bánh mặn cao cấp (5 loại)</li>
-                            <li>Sandwich mini đa dạng</li>
-                            <li>Trái cây theo mùa</li>
-                            <li>Cà phê Việt Nam & cà phê máy</li>
-                            <li>Trà cao cấp các loại</li>
-                            <li>Nước ép trái cây tươi</li>
-                            <li>Trang trí bàn tiệc sang trọng</li>
-                            <li>Nhân viên phục vụ chuyên nghiệp</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text font-bold">120.000 VND/khách</p>
-                        </div>
-                    </div>
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-20">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Tearbreak VIP</h4>
-                        <p class="mb-3">Dành cho các sự kiện quan trọng và khách hàng VIP.</p>
-                        <ul class="space-y-2">
-                            <li>Bánh Âu cao cấp & bánh mặn đặc biệt (7 loại)</li>
-                            <li>Canapé hải sản & thịt bò Wagyu</li>
-                            <li>Mini dessert đặc biệt</li>
-                            <li>Trái cây tươi cao cấp</li>
-                            <li>Cà phê đặc sản & cà phê máy</li>
-                            <li>Trà hoa quả & trà nhập khẩu</li>
-                            <li>Nước ép trái cây tươi & Smoothie</li>
-                            <li>Trang trí bàn tiệc theo chủ đề</li>
-                            <li>Nhân viên phục vụ chuyên nghiệp</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text font-bold">200.000 VND/khách</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <img src="images/tearbreak.png" alt="">
+                <img src="images/tearbreak1.png" alt="">
+                <img src="images/tearbreak2.png" alt="">
             </div>
-
             <div class="text-center mt-12">
                 <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block"
                     onclick="closeServiceDetail()">Liên Hệ Đặt Tiệc</a>
@@ -979,57 +875,10 @@
                 </div>
             </div>
 
-            <div class="my-12">
-                <h3 class="text-2xl font-bold mb-6 text-center">Bộ Sưu Tập <span class="gold-text">Trang Trí</span></h3>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-20">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Bộ Sưu Tập Hiện Đại</h4>
-                        <p class="mb-3">Phong cách tối giản với đường nét sắc sảo và màu sắc trung tính.</p>
-                        <ul class="space-y-2">
-                            <li>Bàn ghế phong cách hiện đại</li>
-                            <li>Khăn trải bàn màu trắng, đen, xám</li>
-                            <li>Đồ sứ trắng tinh tế</li>
-                            <li>Hoa trang trí tối giản</li>
-                            <li>Đèn led âm bàn và đèn dây</li>
-                            <li>Backdrop đơn giản, thanh lịch</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text font-bold">Giá: Liên hệ để báo giá</p>
-                        </div>
-                    </div>
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-30">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Bộ Sưu Tập Cổ Điển</h4>
-                        <p class="mb-3">Vẻ đẹp vượt thời gian với chi tiết tinh xảo và màu sắc ấm áp.</p>
-                        <ul class="space-y-2">
-                            <li>Bàn ghế gỗ phong cách cổ điển</li>
-                            <li>Khăn trải bàn ren và vải lụa</li>
-                            <li>Đồ sứ hoa văn và dao dĩa bạc</li>
-                            <li>Hoa tươi kết hợp với nến</li>
-                            <li>Đèn chùm và đèn nến</li>
-                            <li>Backdrop với họa tiết cổ điển</li>
-                            <li>Thảm trải sàn phong cách châu Âu</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text font-bold">Giá: Liên hệ để báo giá</p>
-                        </div>
-                    </div>
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-20">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Bộ Sưu Tập Nhiệt Đới</h4>
-                        <p class="mb-3">Không gian rực rỡ với màu sắc tươi sáng và yếu tố nhiệt đới.</p>
-                        <ul class="space-y-2">
-                            <li>Bàn ghế mây, tre hoặc gỗ sáng màu</li>
-                            <li>Khăn trải bàn họa tiết nhiệt đới</li>
-                            <li>Đồ sứ màu sắc và dao dĩa gỗ</li>
-                            <li>Hoa và lá nhiệt đới trang trí</li>
-                            <li>Đèn dây và đèn lồng</li>
-                            <li>Backdrop in hình cảnh biển, nhiệt đới</li>
-                            <li>Phụ kiện trang trí như dừa, trái cây</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text font-bold">Giá: Liên hệ để báo giá</p>
-                        </div>
-                    </div>
-                </div>
+               <div class="grid md:grid-cols-3 gap-6">
+                <img src="images/trangtri.png" alt="">
+                <img src="images/trangtri1.png" alt="">
+                <img src="images/trangtri2.png" alt="">
             </div>
 
             <div class="text-center mt-12">
@@ -1084,57 +933,11 @@
                 </div>
             </div>
 
-            <div class="my-12">
-                <h3 class="text-2xl font-bold mb-6 text-center">Loại <span class="gold-text">Sự Kiện</span></h3>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-20">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Sự Kiện Doanh Nghiệp</h4>
-                        <ul class="space-y-2">
-                            <li>Hội nghị và hội thảo</li>
-                            <li>Tiệc cuối năm công ty</li>
-                            <li>Lễ kỷ niệm thành lập</li>
-                            <li>Sự kiện team building</li>
-                            <li>Lễ khai trương, khánh thành</li>
-                            <li>Sự kiện ra mắt sản phẩm</li>
-                            <li>Tiệc tri ân khách hàng</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text">Quy mô: 20-500 khách</p>
-                        </div>
-                    </div>
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-30">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Sự Kiện Xã Hội</h4>
-                        <ul class="space-y-2">
-                            <li>Tiệc cưới và lễ đính hôn</li>
-                            <li>Tiệc sinh nhật đặc biệt</li>
-                            <li>Lễ kỷ niệm và tiệc mừng</li>
-                            <li>Họp mặt gia đình và bạn bè</li>
-                            <li>Tiệc chia tay và tốt nghiệp</li>
-                            <li>Tiệc chào đón em bé</li>
-                            <li>Tiệc ngoài trời và picnic</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text">Quy mô: 20-300 khách</p>
-                        </div>
-                    </div>
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gold border-opacity-20">
-                        <h4 class="text-xl font-bold mb-3 text-center gold-text">Sự Kiện Đặc Biệt</h4>
-                        <ul class="space-y-2">
-                            <li>Festival và sự kiện văn hóa</li>
-                            <li>Triển lãm và trưng bày</li>
-                            <li>Sự kiện từ thiện và gây quỹ</li>
-                            <li>Buổi ra mắt sách và trình diễn nghệ thuật</li>
-                            <li>Sự kiện VIP và tiệc chiêu đãi</li>
-                            <li>Sự kiện thể thao và giải trí</li>
-                            <li>Tiệc chủ đề và tiệc hóa trang</li>
-                        </ul>
-                        <div class="mt-4 text-center">
-                            <p class="text-lg gold-text">Quy mô: 50-1000 khách</p>
-                        </div>
-                    </div>
-                </div>
+               <div class="grid md:grid-cols-3 gap-6">
+                <img src="images/sukien.png" alt="">
+                <img src="images/sukien1.png" alt="">
+                <img src="images/sukien2.png" alt="">
             </div>
-
             <div class="text-center mt-12">
                 <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block"
                     onclick="closeServiceDetail()">Liên Hệ Tư Vấn</a>
@@ -1181,18 +984,25 @@
         <div class="container mx-auto px-4 py-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Gift <span class="gold-text">Boxes</span></h2>
             <div class="gold-divider my-6"></div>
-            <p class="text-xl mb-8">Thông tin chi tiết về dịch vụ Gift Boxes đang được cập nhật.</p>
+
+            <div class="grid grid-cols-2 gap-4">
+                <img src="images/giftbox1.png" alt="Event Organization" class="rounded-lg w-full">
+                <img src="images/giftbox2.png" alt="Event Organization" class="rounded-lg w-full">
+            </div>
+            <p class="text-xl mb-8">Liên hệ ngay với chúng tôi để được tư vấn giftbox ưng ý nhất.</p>
             <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ
                 Ngay</a>
         </div>
     </div>
+
 
     <div id="mealpack-detail" class="service-detail">
         <span class="close-button" onclick="closeServiceDetail()">&times;</span>
         <div class="container mx-auto px-4 py-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Meal <span class="gold-text">Packs</span></h2>
             <div class="gold-divider my-6"></div>
-            <p class="text-xl mb-8">Thông tin chi tiết về dịch vụ Meal Packs đang được cập nhật.</p>
+            <img src="images/comtrua1.png" alt="comtrua">
+            <p class="text-xl mb-8">Liên hệ ngay với chúng tôi để được tư vấn.</p>
             <a href="#contact" class="btn-gold px-8 py-3 rounded-md inline-block" onclick="closeServiceDetail()">Liên Hệ
                 Ngay</a>
         </div>
